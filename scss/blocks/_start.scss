@@ -1,0 +1,46 @@
+.start{
+    background-color: $dark;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    &__block{
+        width: 45%;
+        margin-right: 70px;
+        z-index: 2;
+    }
+    &__wrapper{
+        margin-top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        margin-bottom: 70px;
+    }
+    &__image{
+        // transform: scale(0.1);
+        width: 500px;
+        height: 500px;
+    }
+    &__title{
+        font-size: 88px;
+        font-weight: bold;
+        line-height: 79px;
+        letter-spacing: -0.88px;
+        text-align: left;
+        color: $cultured;
+        margin-bottom: 30px;
+    }
+    &__descr{
+        font-size: 20px;
+        letter-spacing: -0.88px;
+        text-align: left;
+        color: $white-cultures;
+    }
+}
+
+.hal{
+    border-radius: 100%;
+}

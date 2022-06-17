@@ -1,0 +1,60 @@
+@media (max-width: 991px){
+    .btn{
+        &__learn-more{
+            width: 33%;
+        }
+        &__choose{
+            width: 70%;
+        }
+    }
+    .animated{
+        animation: none;
+    }
+    .gray_scale_animated{
+        animation:  none;
+    }
+    section{
+        padding: 45px 0;
+    }
+    .square{
+        right: -50px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 767px){
+    .btn{
+        &__learn-more{
+            width: 40%;
+        }
+        &__choose{
+            margin: 0 auto;
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 575px){
+    .btn{
+        font-size: 12px;
+        &__learn-more{
+            width: 60%;
+        }
+        &__choose{
+            width: 60%;
+        }
+    }
+    .square{
+        right: -50px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+}
+

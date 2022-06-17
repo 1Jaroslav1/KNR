@@ -1,0 +1,48 @@
+@media (max-width: 991px) {
+  .logo a img {
+    width: 136.5px;
+    height: 65px;
+  }
+
+  .navbar a {
+    padding: 6px 6px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .logo a img {
+    width: 105px;
+    height: 50px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar-mobile ul {
+    display: block;
+  }
+  .navbar-mobile ul li {
+    margin-bottom: 15px;
+  }
+  .navbar-mobile ul :last-child {
+    margin-bottom: 0;
+  }
+  .navbar-mobile a.active {
+    color: #3498db;
+    border-bottom: none;
+    border-top: none;
+  }
+
+  .mobile-nav-bars {
+    display: block;
+  }
+}
+@media (max-width: 575px) {
+  .navbar-mobile ul li {
+    margin-bottom: 20px;
+  }
+  .navbar-mobile ul :last-child {
+    margin-bottom: 0;
+  }
+}

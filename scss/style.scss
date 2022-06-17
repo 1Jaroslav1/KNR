@@ -1,0 +1,75 @@
+@import 'blocks/header';
+@import 'base/header_mx';
+
+@import 'blocks/start';
+@import 'base/start_mx';
+
+@import 'blocks/about';
+@import 'base/about_mx';
+
+@import 'blocks/focus';
+@import 'base/focus_mx';
+
+@import 'libs/variable';
+
+
+*{
+    font-family: 'Lexend', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lexend', serif;
+}
+
+
+section{
+    padding: 70px 0;
+}
+
+input{
+    box-shadow: none;
+}
+
+ul{
+    margin-bottom: 0;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.btn-show{
+    display: block;
+}
+
+.square{
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+    background-color: $blueDeFrance;
+    &-left{
+        left: -60px;
+        top: 70%;
+    }
+    &-white{
+        border: 1px solid $grey;
+        background-color: transparent;
+    }
+}
+
+@import 'mx';

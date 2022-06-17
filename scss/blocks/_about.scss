@@ -1,0 +1,37 @@
+.about{
+    padding: 50px 0;
+    padding-top: 150px;
+    position: relative;
+    overflow: hidden;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__block{
+        &:first-child{
+            margin-right: 30px;
+        }
+    }
+    &__image{
+        width: 600px;
+        margin-right: 50px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+    &__title{
+        font-size: 60px;
+        line-height: 68px;
+        margin-bottom: 30px;
+    }
+    &__descr{
+        font-size: 20px;
+    }
+    &__wave{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+}
