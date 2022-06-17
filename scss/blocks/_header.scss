@@ -34,11 +34,6 @@
 
 .navbar{
     padding: 0;
-    // box-sizing: border-box;
-    // height: 70px;
-    // margin-top: 10px;
-    // border-top: 3px solid $cultured;
-    // border-bottom: 3px solid $cultured;
     ul{
         display: flex;
         list-style: none;
@@ -104,7 +99,7 @@
     }
     .mobile-nav-bars {
         position: absolute;
-        top: 25px;
+        top: 15px;
         right: 25px;
     }
 }

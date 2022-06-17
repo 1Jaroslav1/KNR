@@ -1,0 +1,133 @@
+.footer{
+    background: $white-cultures;
+    padding: 70px 0;
+    position: relative;
+    &__wave{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        svg{
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 50px;
+            path{
+                fill: #C0BDBD;
+            }
+        }
+    }
+    &__divider{
+        width: 299px;
+        height: 4px;
+        background-color: white;
+        margin: 0 auto;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    &__block{
+        width: 33%;
+    }
+    &__image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 200px;
+        }
+    }
+    &__nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            li{
+                position: relative;
+            }
+        }
+        &-link{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            white-space: nowrap;
+            transition: 0.2s;
+            &:hover{
+                color: $blueDeFrance;
+            }
+        }
+        &-active{
+            color: $blueDeFrance;
+        }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__social{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        &-item{
+            margin-top: 20px;
+            font-size: 32px;
+            display: inline-block;
+            background: black;
+            color: white;
+            line-height: 1;
+            padding: 12px;
+            border-radius: 50%;
+            text-align: center;
+            transition: 0.3s;
+            &:hover{
+                background: $blueDeFrance;
+                color: white;
+            }
+        }
+    }
+    &__contacts{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-left: 20px;
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: black;
+            transition: 0.3s;
+            i{
+                margin-right: 20px;
+                font-size: 25px;
+            }
+            p{
+                font-size: 18px;
+            }
+
+            &:hover{
+                color: $blueDeFrance;
+                transition: 0.3s;
+            }
+        }
+    }
+}

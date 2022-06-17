@@ -10,6 +10,9 @@
 @import 'blocks/focus';
 @import 'base/focus_mx';
 
+@import 'blocks/footer';
+@import 'base/footer_mx';
+
 @import 'libs/variable';
 
 
@@ -35,6 +38,10 @@ section{
 
 input{
     box-shadow: none;
+}
+
+p{
+    margin: 0;
 }
 
 ul{
