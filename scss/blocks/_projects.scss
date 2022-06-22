@@ -1,12 +1,65 @@
+// .projects{
+//     background-color: $greyBg;
+//     &__title{
+//         font-weight: 600;
+//         font-size: 50px;
+//         line-height: 56px;
+//         text-align: center;
+//         color: $blueDeFrance;
+//     }
+//     &__wrapper{
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//     }
+//     &__block{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         width: 100%;
+//         margin-right: 50px;
+//         &:last-child{
+//             margin-right: 0;
+//         }
+//         &-title{
+//             font-family: 'Lexend', sans-serif;
+//             font-size: 40px;
+//             font-weight: 500;
+//             line-height: 38px;
+//             text-align: left;
+//             color: black;
+//             margin-bottom: 20px;
+//         }
+//         &-image{
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             margin: 0 auto;
+//             img{
+//                 width: 200px;
+//                 height: 200px;
+//                 border-radius: 100%;
+//             }
+//         }
+//     }
+// }
+
+
 .projects{
     background-color: $greyBg;
     padding-bottom: 0;
     &__title{
-        font-weight: 600;
-        font-size: 50px;
-        line-height: 56px;
+        font-size: 60px;
+        line-height: 68px;
+        margin-bottom: 30px;
         text-align: center;
-        color: $blueDeFrance;
+        color: black;
+        // border: 3px solid $blueDeFrance;
+        // margin: 0 auto;
+        // padding: 10px 20px;
+        // width: 30%;
+        // border-radius: 20px;
     }
     &__item{
         display: flex;
@@ -52,9 +105,8 @@
             }
         }
         &-title{
-            font-family: 'Lexend', sans-serif;
             font-size: 40px;
-            font-weight: 500;
+            font-weight: 700;
             line-height: 38px;
             text-align: left;
             color: black;
@@ -62,7 +114,7 @@
         }
         &-descr{
             font-size: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         &-btn{
             color: white;
@@ -71,13 +123,13 @@
             font-size: 24px;
             padding: 8px 15px;
             background-color: black;
-            border: 1px solid black;
+            // border: 1px solid black;
             border-radius: 15px;
             text-decoration: none;
             transition: .3s all;
             &:hover{
-                color: black;
-                background-color: white;
+                color: white;
+                background-color: $blueDeFrance;
                 transition: .3s all;
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
             }
