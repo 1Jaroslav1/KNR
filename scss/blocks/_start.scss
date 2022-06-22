@@ -23,6 +23,7 @@
         // transform: scale(0.1);
         width: 500px;
         height: 500px;
+        animation: moving 5s infinite ease;
     }
     &__title{
         font-size: 88px;
@@ -39,8 +40,21 @@
         text-align: left;
         color: $white-cultures;
     }
+
+    @keyframes moving {
+        0% {
+            transform: translateY(-5%);
+        }
+        50% {
+            transform: translateY(5%);
+        }
+        100% {
+            transform: translateY(-5%);
+        }
 }
 
 .hal{
     border-radius: 100%;
+}
+
 }
