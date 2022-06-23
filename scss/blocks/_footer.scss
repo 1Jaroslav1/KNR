@@ -18,6 +18,13 @@
                 fill: #C0BDBD;
             }
         }
+        &-white{
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+        }
     }
     &__divider{
         width: 299px;

@@ -3,7 +3,8 @@
         overflow: hidden;
         padding-top: 140px;
         position: relative;
-        background-color: black;
+        padding-bottom: 0;
+        // background-color: black;
         &__text{
             position: absolute;
             top: 50%;
@@ -74,55 +75,85 @@
     }
 
     &-departments{
+        // background: url('../images/circle-scatter-haikei2.svg') center (center/cover) no-repeat;
+        // background-color: $dark-cultures;
         &__title{
             font-size: 60px;
             line-height: 68px;
             margin-bottom: 50px;
             text-align: center;
+            font-family: RadicalWut;
         }
-        &__container {
+        &__wrapper {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            &-item{
-                height: 400px;
-                width: 300px;
-                margin: 30px 60px;
-                animation: moving 10s infinite ease;
-                transition: all .8s ease;
-                img{
-                    border-radius: 10px;
-                    margin: 0 auto;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    filter: brightness(70%);
-                }
-                &:hover{
-                    animation-iteration-count: 1;
-                    cursor: pointer;
-                    transform: scale(1.1);
-                    filter: brightness(60%);
-                }
-                @keyframes moving {
-                    0% {
-                        transform: translateY(-5%);
-                    }
-                    50% {
-                        transform: translateY(5%);
-                    }
-                    100% {
-                        transform: translateY(-5%);
-                    }
-                }
-                &:nth-child(2){
-                    animation-delay:2s;
-                }
-                &:nth-child(3){
-                    animation-delay:1s;
-                }
         }
+        &__item{
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 10px;
+            width: 100%;
+            height: 500px;
+            margin: 30px 40px;
+            transition: all .8s ease;
+            position: relative;
+            &-title{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                font-size: 26px;
+                font-weight: 500;
+                line-height: 38px;
+                text-align: left;
+                color: white;
+                margin-bottom: 20px;
+                transition: all .8s ease;
+                text-align: center;
+                opacity: 1;
+            }
+            &-descr{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 90%;
+                color: white;
+                font-size: 18px;
+                transition: all .8s ease;
+                text-align: center;
+                opacity: 0;
+            }
+            img{
+                border-radius: 10px;
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all .8s ease;
+                filter: brightness(70%);
+            }
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all .8s ease;
+                .project-departments__item-title {
+                    opacity: 0;
+                    transition: all .8s ease;
+                }
+                .project-departments__item-descr {
+                    opacity: 1;
+                    transition: all .8s ease;
+                }
+                img{
+                    transition: all .8s ease;
+                    filter: brightness(30%);
+                }
+            }
         }
     }
 }
