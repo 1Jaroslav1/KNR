@@ -1,0 +1,106 @@
+@media (max-width: 1200px){
+    .projects{
+        &__item{
+            padding: 150px 150px;
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .projects{
+        &__item{
+            padding: 120px 150px;
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .projects{
+        &__title{
+            margin-bottom: 0;
+        }
+        &__item{
+            flex-direction: column;
+            width: 100%;
+            &-block{
+                width: 70%;
+                &:first-child{
+                    margin-right: 0;
+                }
+            }
+            &-title{
+                text-align: center;
+            }
+            &-descr{
+                text-align: center;
+            }
+            &-btn{
+                margin: 0 auto;
+            }
+            &-reverse{
+                flex-flow: column-reverse;
+            }
+        }
+        &__square{
+            width: 70px;
+            height: 70px;
+            &-top{
+                top: 8%;
+            }
+            &-left{
+                left: 8%;
+            }
+            &-bottom{
+                bottom: -8%;
+            }
+            &-right{
+                right: 8%;
+            }
+            &-big{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .projects{
+        &__title{
+            font-size: 40px;
+        }
+        &__item{
+            padding: 100px 70px;
+            &-block{
+                width: 80%;
+            }
+            &-title{
+                font-size: 30px;
+            }
+            &-descr{
+                font-size: 18px;
+            }
+            &-btn{
+                width: 150px;
+                font-size: 20px;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 575px){
+    .projects{
+        &__item{
+            padding: 70px 30px;
+        }
+        &__square{
+            display: none;
+        }
+    }
+
+    .slick-dots li button:before
+    {
+        display: none;
+    }
+}
