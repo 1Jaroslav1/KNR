@@ -167,6 +167,12 @@ function clickBars(navSelector, navItemsSelector, barsSelector){
 window.addEventListener('DOMContentLoaded', function() {
     addActiveNav('.navbar-link', 'active');
     clickBars('.navbar', '.navbar-link', '.mobile-nav-bars');
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
     // slider({
     //     container: '.project-start__slider',
     //     slide: '.project-start__item',

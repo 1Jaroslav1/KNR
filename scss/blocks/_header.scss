@@ -87,12 +87,21 @@
         background-color: #fff;
         overflow-y: auto;
         transition: 0.3s;
+        display: flex;
+        // flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        align-items: stretch;
     }
-
     a{
         padding: 10px 20px;
-        font-size: 15px;
+        font-size: 18px;
         color: #222222;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        // height: 100%;
         &:hover{
             color: $cultured;
         }
