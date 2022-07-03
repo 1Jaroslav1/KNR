@@ -3,30 +3,30 @@
     src: url("../fonts/radikalwut-bold.ttf");
 }
 
-@import 'blocks/header';
-@import 'base/header_mx';
+@import 'blocks/_header';
+@import 'base/_header_mx';
 
-@import 'blocks/start';
-@import 'base/start_mx';
+@import 'blocks/_start';
+@import 'base/_start_mx';
 
-@import 'blocks/about';
-@import 'base/about_mx';
+@import 'blocks/_about';
+@import 'base/_about_mx';
 
-@import 'blocks/focus';
-@import 'base/focus_mx';
+@import 'blocks/_focus';
+@import 'base/_focus_mx';
 
-@import 'blocks/projects';
-@import 'base/projects_mx';
+@import 'blocks/_projects';
+@import 'base/_projects_mx';
 
-@import 'blocks/sponsors';
-@import 'base/sponsors_mx';
+@import 'blocks/_sponsors';
+@import 'base/_sponsors_mx';
 
-@import 'blocks/project';
+@import 'blocks/_project';
 
-@import 'blocks/footer';
-@import 'base/footer_mx';
+@import 'blocks/_footer';
+@import 'base/_footer_mx';
 
-@import 'libs/variable';
+@import 'libs/_variable';
 
 
 
@@ -94,4 +94,4 @@ ul{
     }
 }
 
-@import 'mx';
+@import '_mx';

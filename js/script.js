@@ -2,7 +2,6 @@ function addActiveNav(navItemsSelector, activeSelector){
     const nav = document.querySelectorAll(navItemsSelector);
     nav.forEach(nav_item => {
         nav_item.addEventListener('click', (e)=>{
-            e.preventDefault()
             if(!e.target.querySelector("i") && !e.target.classList.contains("fas")){
                 nav.forEach(i => {
                     if(i.classList.contains(activeSelector)){
@@ -209,61 +208,75 @@ $(document).ready(function(){
 
 // Show active menu when scrolling
 const highlightMenu = () => {
-    const startMenu = document.querySelector('#start-page');
-    const aboutMenu = document.querySelector('#about-page');
-    const projectsMenu = document.querySelector('#projects-page');
-    const sponsorsMenu = document.querySelector('#sponsors-page');
-    const footerMenu = document.querySelector('#footer-page');
+    const elems = document.querySelectorAll('[data-section]');
+    const menu = document.querySelectorAll('.navbar-link');
 
-    let scrollPos = window.scrollY;
-    console.log(scrollPos);
 
-    let scrollRanges = [];
+    // console.log(elems[0].getAttribute('data-section') + '-page');
+    elems.forEach((elem) => {
+        console.log(elem.offsetTop);
+        console.log(elem.getBoundingClientRect());
+    });
 
-    if (window.innerWidth >= 1600) {
-        scrollRanges = [700, 2000, 5400, 5550];
-    } else if (window.innerWidth >= 992) {
-        scrollRanges = [700, 2000, 5000, 5200];
-    } else if (window.innerWidth >= 768) {
-        scrollRanges = [1050, 2900, 6500, 6650];
-    } else {
-        scrollRanges = [950, 2850, 6000, 6300];
-    }
+    menu.forEach((menuItem) => {
+        menuItem.remove('active');
+    });
 
-    if (scrollPos < scrollRanges[0]) {
-        startMenu.classList.add('active');
-        aboutMenu.classList.remove('active');
-        projectsMenu.classList.remove('active');
-        sponsorsMenu.classList.remove('active');
-        footerMenu.classList.remove('active');
+    // const startMenu = document.querySelector('#start-page');
+    // const aboutMenu = document.querySelector('#about-page');
+    // const projectsMenu = document.querySelector('#projects-page');
+    // const sponsorsMenu = document.querySelector('#sponsors-page');
+    // const footerMenu = document.querySelector('#footer-page');
 
-    } else if (scrollPos < scrollRanges[1]) {
-        startMenu.classList.remove('active');
-        aboutMenu.classList.add('active');
-        projectsMenu.classList.remove('active');
-        sponsorsMenu.classList.remove('active');
-        footerMenu.classList.remove('active');
+    // let scrollPos = window.scrollY;
+    // // console.log(scrollPos);
 
-    } else if (scrollPos < scrollRanges[2]) {
-        startMenu.classList.remove('active');
-        aboutMenu.classList.remove('active');
-        projectsMenu.classList.add('active');
-        sponsorsMenu.classList.remove('active');
-        footerMenu.classList.remove('active');
+    // let scrollRanges = [];
 
-    } else if (scrollPos < scrollRanges[3]) {
-        startMenu.classList.remove('active');
-        aboutMenu.classList.remove('active');
-        projectsMenu.classList.remove('active');
-        sponsorsMenu.classList.add('active');
-        footerMenu.classList.remove('active');
-    } else {
-        startMenu.classList.remove('active');
-        aboutMenu.classList.remove('active');
-        projectsMenu.classList.remove('active');
-        sponsorsMenu.classList.remove('active');
-        footerMenu.classList.add('active');
-    }
+    // if (window.innerWidth >= 1600) {
+    //     scrollRanges = [700, 2000, 5400, 5550];
+    // } else if (window.innerWidth >= 992) {
+    //     scrollRanges = [700, 2000, 5000, 5200];
+    // } else if (window.innerWidth >= 768) {
+    //     scrollRanges = [1050, 2900, 6500, 6650];
+    // } else {
+    //     scrollRanges = [950, 2850, 6000, 6300];
+    // }
+
+    // if (scrollPos < scrollRanges[0]) {
+    //     startMenu.classList.add('active');
+    //     aboutMenu.classList.remove('active');
+    //     projectsMenu.classList.remove('active');
+    //     sponsorsMenu.classList.remove('active');
+    //     footerMenu.classList.remove('active');
+
+    // } else if (scrollPos < scrollRanges[1]) {
+    //     startMenu.classList.remove('active');
+    //     aboutMenu.classList.add('active');
+    //     projectsMenu.classList.remove('active');
+    //     sponsorsMenu.classList.remove('active');
+    //     footerMenu.classList.remove('active');
+
+    // } else if (scrollPos < scrollRanges[2]) {
+    //     startMenu.classList.remove('active');
+    //     aboutMenu.classList.remove('active');
+    //     projectsMenu.classList.add('active');
+    //     sponsorsMenu.classList.remove('active');
+    //     footerMenu.classList.remove('active');
+
+    // } else if (scrollPos < scrollRanges[3]) {
+    //     startMenu.classList.remove('active');
+    //     aboutMenu.classList.remove('active');
+    //     projectsMenu.classList.remove('active');
+    //     sponsorsMenu.classList.add('active');
+    //     footerMenu.classList.remove('active');
+    // } else {
+    //     startMenu.classList.remove('active');
+    //     aboutMenu.classList.remove('active');
+    //     projectsMenu.classList.remove('active');
+    //     sponsorsMenu.classList.remove('active');
+    //     footerMenu.classList.add('active');
+    // }
 };
 
 window.addEventListener('scroll', highlightMenu);
