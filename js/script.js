@@ -208,19 +208,19 @@ $(document).ready(function(){
 
 // Show active menu when scrolling
 const highlightMenu = () => {
-    const elems = document.querySelectorAll('[data-section]');
-    const menu = document.querySelectorAll('.navbar-link');
+    // const elems = document.querySelectorAll('[data-section]');
+    // const menu = document.querySelectorAll('.navbar-link');
 
 
-    // console.log(elems[0].getAttribute('data-section') + '-page');
-    elems.forEach((elem) => {
-        console.log(elem.offsetTop);
-        console.log(elem.getBoundingClientRect());
-    });
+    // // console.log(elems[0].getAttribute('data-section') + '-page');
+    // elems.forEach((elem) => {
+    //     console.log(elem.offsetTop);
+    //     console.log(elem.getBoundingClientRect());
+    // });
 
-    menu.forEach((menuItem) => {
-        menuItem.remove('active');
-    });
+    // menu.forEach((menuItem) => {
+    //     menuItem.remove('active');
+    // });
 
     // const startMenu = document.querySelector('#start-page');
     // const aboutMenu = document.querySelector('#about-page');
