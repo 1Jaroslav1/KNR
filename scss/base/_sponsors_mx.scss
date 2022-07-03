@@ -6,6 +6,16 @@
         &__slider{
             width: 80%;
         }
+        &__block{
+            flex-direction: column;
+            img{
+                width: 50%;
+                margin-bottom: 40px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }
 
@@ -13,6 +23,11 @@
     .sponsors{
         &__slider{
             width: 95%;
+        }
+        &__block{
+            img{
+                width: 70%;
+            }
         }
     }
 }
