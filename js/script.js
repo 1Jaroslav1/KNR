@@ -205,16 +205,6 @@ $(document).ready(function(){
     });
 });
 
-
-function findActualSection(elements, offset){
-    for(let i = 1; i < elements.length; i++){
-        if(elements[i].getBoundingClientRect().y - offset > 0 && elements[i - 1].getBoundingClientRect().y - offset < 0){
-            return elements[i-1].getAttribute('data-section');
-        }
-    }
-    return elements[elements.length-1].getAttribute('data-section');
-}
-
 // Show active menu when scrolling
 const highlightMenu = () => {
     const elems = document.querySelectorAll('[data-section]');
@@ -266,5 +256,32 @@ const highlightMenu = () => {
     });
 
 };
+
+// function findActualSection(elements, offset){
+//     for(let i = 1; i < elements.length; i++){
+//         if(elements[i].getBoundingClientRect().y - offset > 0 && elements[i - 1].getBoundingClientRect().y - offset < 0){
+//             return elements[i-1].getAttribute('data-section');
+//         }
+//     }
+//     return elements[elements.length-1].getAttribute('data-section');
+// }
+
+// // Show active menu when scrolling
+// const highlightMenu = () => {
+//     const elems = document.querySelectorAll('[data-section]');
+//     const menu = document.querySelectorAll('.navbar-link');
+
+//     let actualSection = findActualSection(elems, 200);
+//     if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight){
+//         actualSection = elems[elems.length-1].getAttribute('data-section')
+//     }
+
+//     menu.forEach(menuItem => {
+//         menuItem.classList.remove('active');
+//     });
+
+//     const actualMenuItem = document.getElementById(`${actualSection}-page`);
+//     if(actualMenuItem) actualMenuItem.classList.add('active');
+// };
 
 window.addEventListener('scroll', highlightMenu);
