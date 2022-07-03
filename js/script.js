@@ -210,73 +210,52 @@ $(document).ready(function(){
 const highlightMenu = () => {
     const elems = document.querySelectorAll('[data-section]');
     const menu = document.querySelectorAll('.navbar-link');
+    let elemsHeight = [];
+    let elemActiveRanges = [];
+    let diffValues = [];
 
-
-    // console.log(elems[0].getAttribute('data-section') + '-page');
     elems.forEach((elem) => {
-        console.log(elem.offsetTop);
-        console.log(elem.getBoundingClientRect());
+        elemsHeight.push(elem.offsetHeight);
+    })
+
+    let index = 0;
+    let actualHeightSum = 0;
+    elems.forEach((elem) => {
+        if (elem.offsetTop !== 0) {
+            if (actualHeightSum < document.body.scrollHeight - $(window).height()) {
+                elemActiveRanges.push(elem.offsetTop - 200)
+
+            } else {
+                let heightVal = 0;
+
+                for (let i = index; i < elemsHeight.length - 1; i++) {
+                    heightVal += elemsHeight[i];
+                }
+
+                elemActiveRanges.push(document.body.scrollHeight - $(window).height() - heightVal)
+            }
+        } else {
+            elemActiveRanges.push(elem.offsetTop);
+        }
+
+        actualHeightSum += elem.offsetHeight;
+        index++;
     });
 
+    elemActiveRanges.forEach((range) => {diffValues.push(window.scrollY - range);})
+
+    let positiveValues = diffValues.filter((value) => {return value >= 0; })
+
+    let activeRange = diffValues.indexOf(Math.min.apply(Math, positiveValues));
+
+    index = 0;
     menu.forEach((menuItem) => {
-        menuItem.remove('active');
+        index === activeRange
+        ? menuItem.classList.add('active')
+        : menuItem.classList.remove('active');
+        index++;
     });
 
-    // const startMenu = document.querySelector('#start-page');
-    // const aboutMenu = document.querySelector('#about-page');
-    // const projectsMenu = document.querySelector('#projects-page');
-    // const sponsorsMenu = document.querySelector('#sponsors-page');
-    // const footerMenu = document.querySelector('#footer-page');
-
-    // let scrollPos = window.scrollY;
-    // // console.log(scrollPos);
-
-    // let scrollRanges = [];
-
-    // if (window.innerWidth >= 1600) {
-    //     scrollRanges = [700, 2000, 5400, 5550];
-    // } else if (window.innerWidth >= 992) {
-    //     scrollRanges = [700, 2000, 5000, 5200];
-    // } else if (window.innerWidth >= 768) {
-    //     scrollRanges = [1050, 2900, 6500, 6650];
-    // } else {
-    //     scrollRanges = [950, 2850, 6000, 6300];
-    // }
-
-    // if (scrollPos < scrollRanges[0]) {
-    //     startMenu.classList.add('active');
-    //     aboutMenu.classList.remove('active');
-    //     projectsMenu.classList.remove('active');
-    //     sponsorsMenu.classList.remove('active');
-    //     footerMenu.classList.remove('active');
-
-    // } else if (scrollPos < scrollRanges[1]) {
-    //     startMenu.classList.remove('active');
-    //     aboutMenu.classList.add('active');
-    //     projectsMenu.classList.remove('active');
-    //     sponsorsMenu.classList.remove('active');
-    //     footerMenu.classList.remove('active');
-
-    // } else if (scrollPos < scrollRanges[2]) {
-    //     startMenu.classList.remove('active');
-    //     aboutMenu.classList.remove('active');
-    //     projectsMenu.classList.add('active');
-    //     sponsorsMenu.classList.remove('active');
-    //     footerMenu.classList.remove('active');
-
-    // } else if (scrollPos < scrollRanges[3]) {
-    //     startMenu.classList.remove('active');
-    //     aboutMenu.classList.remove('active');
-    //     projectsMenu.classList.remove('active');
-    //     sponsorsMenu.classList.add('active');
-    //     footerMenu.classList.remove('active');
-    // } else {
-    //     startMenu.classList.remove('active');
-    //     aboutMenu.classList.remove('active');
-    //     projectsMenu.classList.remove('active');
-    //     sponsorsMenu.classList.remove('active');
-    //     footerMenu.classList.add('active');
-    // }
 };
 
 window.addEventListener('scroll', highlightMenu);
