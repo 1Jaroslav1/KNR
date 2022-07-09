@@ -27,7 +27,7 @@
     }
     &__title{
         font-family: RadicalWut;
-        font-size: 88px;
+        font-size: 96px;
         font-weight: bold;
         line-height: 79px;
         letter-spacing: -0.88px;
@@ -36,10 +36,14 @@
         margin-bottom: 30px;
     }
     &__descr{
-        font-size: 20px;
+        font-family: RadicalWut;
+        font-size: 72px;
+        font-weight: bold;
+        line-height: 79px;
         letter-spacing: -0.88px;
         text-align: left;
-        color: $white-cultures;
+        color: $cultured;
+        margin-bottom: 30px;
     }
 
     @keyframes moving {
