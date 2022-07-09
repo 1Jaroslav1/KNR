@@ -1,3 +1,3 @@
-$(document).ready(function(){
-    $('.project-start__slider').slick();
-});
+// $(document).ready(function(){
+//     $('.project-start__slider').slick();
+// });

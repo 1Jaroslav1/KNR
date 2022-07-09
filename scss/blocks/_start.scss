@@ -29,11 +29,16 @@
         font-family: RadicalWut;
         font-size: 96px;
         font-weight: bold;
-        line-height: 79px;
-        letter-spacing: -0.88px;
+        line-height: 90px;
+        // letter-spacing: -0.88px;
         text-align: left;
         color: $cultured;
         margin-bottom: 30px;
+        span{
+            font-family: RadicalWut;
+            color: $blueDeFrance;
+            margin-right: 5px;
+        }
     }
     &__descr{
         font-family: RadicalWut;

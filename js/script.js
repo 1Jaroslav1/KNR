@@ -203,4 +203,13 @@ $(document).ready(function(){
         autoplaySpeed: 3000,
         adaptiveHeight: true
     });
+    $('.project-start__slider').slick({
+        arrows: false,
+        speed: 1000,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 6000,
+        adaptiveHeight: true
+    });
 });

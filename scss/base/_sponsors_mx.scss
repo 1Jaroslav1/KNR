@@ -8,7 +8,7 @@
         }
         &__block{
             flex-direction: column;
-            img{
+            a{
                 width: 50%;
                 margin-bottom: 40px;
                 &:last-child{
@@ -25,7 +25,7 @@
             width: 95%;
         }
         &__block{
-            img{
+            a{
                 width: 70%;
             }
         }
