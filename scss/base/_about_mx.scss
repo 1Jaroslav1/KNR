@@ -44,7 +44,7 @@
 }
 
 @media (max-width: 991px){
-    
+
 }
 
 @media (max-width: 767px){
@@ -72,6 +72,9 @@
         }
         &__descr{
             font-size: 18px;
+            &-title{
+                font-size: 30px;
+            }
         }
     }
 }
