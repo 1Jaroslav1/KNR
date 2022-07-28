@@ -12,6 +12,11 @@
 
 @media (max-width: 1024px){
     .about{
+        &__triangle{
+            svg{
+                height: 50px;
+            }
+        }
         &__wrapper{
             flex-direction: column;
         }
@@ -52,6 +57,11 @@
 
 @media (max-width: 575px){
     .about{
+        &__triangle{
+            svg{
+                height: 35px;
+            }
+        }
         &__image{
             margin-right: 0;
             width: 300px;

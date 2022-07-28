@@ -1,0 +1,38 @@
+@media (max-width: 991px){
+    .project{
+        &-start{
+            padding-top: 110px;
+            &__text{
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .project{
+        &-start{
+            padding-top: 90px;
+            &__text{
+                width: 100%;
+                right: 50%;
+                transform: translateX(50%);
+            }
+            &__title{
+                font-size: 33px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px){
+    .project{
+        &-start{
+            &__title{
+                font-size: 25px;
+            }
+        }
+    }
+}
