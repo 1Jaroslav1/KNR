@@ -5,6 +5,11 @@
             &__text{
                 width: 50%;
             }
+            &__item{
+                img{
+                    height: 50vh;
+                }
+            }
         }
     }
 }
@@ -18,8 +23,13 @@
                 right: 50%;
                 transform: translateX(50%);
             }
+            &__item{
+                img{
+                    height: 40vh;
+                }
+            }
             &__title{
-                font-size: 50px;
+                font-size: 40px;
                 width: 100%;
                 text-align: center;
             }
@@ -31,7 +41,12 @@
     .project{
         &-start{
             &__title{
-                font-size: 50px;
+                font-size: 30px;
+            }
+            &__item{
+                img{
+                    height: 30vh;
+                }
             }
         }
     }

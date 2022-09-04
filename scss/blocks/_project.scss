@@ -40,39 +40,6 @@
                 filter: brightness(70%);
             }
         }
-        &__slider{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            &-prev {
-                left: 3%;
-            }
-            &-next {
-                right: 3%;
-            }
-            &-arrow{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                margin-left: 10px;
-                cursor: pointer;
-                z-index: 1000;
-                background-color: rgba($color: #ffffff, $alpha: .4);
-                padding: 10px;
-                width: 50px;
-                height: 50px;
-                border-radius: 100%;
-                &:hover{
-                    background-color: rgba($color: #ffffff, $alpha: .7);
-                }
-                i{
-                    font-size: 30px;
-                }
-            }
-        }
     }
 
     &-departments{
